@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { sword } from "lucide-react";
+import { Sword } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -9,13 +9,19 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2 text-amber-400 hover:text-amber-300 transition-colors">
-              <sword className="h-8 w-8" />
+              <Sword className="h-8 w-8" />
               <span className="text-xl font-bold">Vins Forge</span>
             </Link>
           </div>
           <div className="flex items-center space-x-8">
             <Link 
               to="/" 
+              className="text-gray-300 hover:text-amber-400 transition-colors font-medium"
+            >
+              About
+            </Link>
+            <Link 
+              to="/gallery" 
               className="text-gray-300 hover:text-amber-400 transition-colors font-medium"
             >
               Gallery

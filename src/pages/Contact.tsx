@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
@@ -36,7 +35,7 @@ const Contact = () => {
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -99,24 +98,17 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="swordType" className="block text-sm font-medium text-gray-300 mb-2">
-                    Sword Type Interest
+                    Sword/Shield Type Interest
                   </label>
-                  <select
+                  <Input
                     id="swordType"
                     name="swordType"
+                    type="text"
                     value={formData.swordType}
                     onChange={handleChange}
-                    className="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-3 py-2"
-                  >
-                    <option value="">Select a type...</option>
-                    <option value="medieval">Medieval Longsword</option>
-                    <option value="katana">Japanese Katana</option>
-                    <option value="viking">Viking Sword</option>
-                    <option value="celtic">Celtic Blade</option>
-                    <option value="rapier">Renaissance Rapier</option>
-                    <option value="claymore">Scottish Claymore</option>
-                    <option value="custom">Custom Design</option>
-                  </select>
+                    placeholder="e.g., Custom Viking sword, Medieval shield, Japanese katana..."
+                    className="bg-slate-700 border-slate-600 text-white"
+                  />
                 </div>
 
                 <div>

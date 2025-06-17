@@ -147,6 +147,48 @@ export const swords: Sword[] = [
     },
     forgeTime: "12 weeks",
     price: "Contact for pricing"
+  },
+  {
+    id: "norman-kite-shield",
+    name: "Norman Kite Shield",
+    type: "Medieval Shield",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
+    description: "A traditional Norman kite shield crafted with authentic medieval techniques. This defensive masterpiece features hand-painted heraldry and steel reinforcements, offering both protection and prestige on the battlefield.",
+    specifications: {
+      length: "120cm (47 inches)",
+      weight: "3.2kg (7.1 lbs)",
+      blade: "N/A - Shield",
+      handle: "Leather grip with steel enarmes",
+      guard: "Steel rim reinforcement"
+    },
+    materials: {
+      steel: "Steel rim and boss",
+      handle: "Layered hardwood with leather",
+      fittings: "Hand-forged steel reinforcements"
+    },
+    forgeTime: "4 weeks",
+    price: "Contact for pricing"
+  },
+  {
+    id: "viking-round-shield",
+    name: "Viking Round Shield",
+    type: "Norse Shield",
+    image: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?w=800&h=600&fit=crop",
+    description: "An authentic Viking round shield based on archaeological finds from the 9th century. Features traditional lime wood construction with iron boss and authentic Norse patterns painted with natural pigments.",
+    specifications: {
+      length: "90cm (35 inches)",
+      weight: "2.8kg (6.2 lbs)",
+      blade: "N/A - Shield",
+      handle: "Single iron grip",
+      guard: "Central iron boss"
+    },
+    materials: {
+      steel: "Hand-forged iron boss and rim",
+      handle: "Lime wood planks with linen backing",
+      fittings: "Traditional iron and leather"
+    },
+    forgeTime: "5 weeks",
+    price: "Contact for pricing"
   }
 ];
 
