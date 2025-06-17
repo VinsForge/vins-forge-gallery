@@ -41,24 +41,29 @@ const SwordDetails = () => {
           Back to Gallery
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Image Gallery */}
-          <div>
-            <ImageGallery images={sword.images} alt={sword.name} />
-          </div>
-
-          {/* Details */}
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left side - Image and Description */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Title */}
             <div>
               <h1 className="text-4xl font-bold text-white mb-2">{sword.name}</h1>
               <p className="text-xl text-amber-400 font-medium">{sword.type}</p>
             </div>
 
+            {/* Image Gallery */}
+            <div>
+              <ImageGallery images={sword.images} alt={sword.name} />
+            </div>
+
+            {/* Description */}
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
               <p className="text-gray-300 leading-relaxed">{sword.description}</p>
             </div>
+          </div>
 
+          {/* Right side - Specifications and Details */}
+          <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Specifications</h2>
               <div className="bg-slate-800 rounded-lg p-6 space-y-3 border border-slate-700">
@@ -83,14 +88,14 @@ const SwordDetails = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between bg-slate-800 rounded-lg p-6 border border-slate-700">
-              <div>
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700 space-y-3">
+              <div className="flex justify-between">
                 <span className="text-gray-400">Forge Time:</span>
-                <span className="text-amber-400 font-bold ml-2">{sword.forgeTime}</span>
+                <span className="text-amber-400 font-bold">{sword.forgeTime}</span>
               </div>
-              <div>
+              <div className="flex justify-between">
                 <span className="text-gray-400">Price:</span>
-                <span className="text-white font-bold ml-2">{sword.price}</span>
+                <span className="text-white font-bold">{sword.price}</span>
               </div>
             </div>
 
