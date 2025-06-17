@@ -2,6 +2,7 @@
 import { useParams, Link } from "react-router-dom";
 import { getSwordById } from "@/data/swords";
 import Navbar from "@/components/Navbar";
+import ImageGallery from "@/components/ImageGallery";
 import { ArrowLeft } from "lucide-react";
 
 const SwordDetails = () => {
@@ -16,7 +17,7 @@ const SwordDetails = () => {
           <h1 className="text-4xl font-bold text-white mb-4">Sword Not Found</h1>
           <p className="text-gray-300 mb-8">The sword you're looking for doesn't exist in our collection.</p>
           <Link 
-            to="/" 
+            to="/gallery" 
             className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center gap-2"
           >
             <ArrowLeft className="h-4 w-4" />
@@ -33,7 +34,7 @@ const SwordDetails = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link 
-          to="/" 
+          to="/gallery" 
           className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors mb-8"
         >
           <ArrowLeft className="h-4 w-4" />
@@ -41,13 +42,9 @@ const SwordDetails = () => {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Image */}
-          <div className="aspect-w-4 aspect-h-3">
-            <img
-              src={sword.image}
-              alt={sword.name}
-              className="w-full h-96 lg:h-full object-cover rounded-lg shadow-2xl border border-slate-700"
-            />
+          {/* Image Gallery */}
+          <div>
+            <ImageGallery images={sword.images} alt={sword.name} />
           </div>
 
           {/* Details */}
